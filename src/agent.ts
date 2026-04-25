@@ -99,9 +99,9 @@ export const executeMockTool = async (functionName: string, args: any): Promise<
 };
 
 export const createAgentChatSession = () => {
-  // Using gemini-1.5-flash as it's fast and supports tool calling
+  // Using gemini-2.5-flash as it's fast and supports tool calling
   const model = genAI.getGenerativeModel({ 
-    model: "gemini-1.5-flash",
+    model: "gemini-2.5-flash",
     systemInstruction: agentSystemInstruction,
     tools: [
       {

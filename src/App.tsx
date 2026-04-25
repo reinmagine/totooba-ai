@@ -53,8 +53,8 @@ function App() {
       let response = result.response;
 
       // Check if the model decided to call tools
-      while (response.functionCalls && response.functionCalls().length > 0) {
-        const calls = response.functionCalls();
+      let calls = response.functionCalls ? response.functionCalls() : [];
+      while (calls && calls.length > 0) {
         const call = calls[0]; // Process first tool call
         
         // Show scanning state
@@ -76,6 +76,7 @@ function App() {
         }]);
         
         response = result.response;
+        calls = response.functionCalls ? response.functionCalls() : [];
         
         // Remove the scanning message
         setMessages(prev => prev.filter(m => !m.isVerifying));

@@ -1,73 +1,54 @@
-# React + TypeScript + Vite
+# 🛡️ TotooBa.AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The Anti-Budol & Fact-Check Agent for the Filipino Commuter and Netizen
 
-Currently, two official plugins are available:
+## About The Project
+TotooBa.AI is a hyper-local, agentic AI assistant built specifically for the Build with AI Manila 2026 Challenge. It was designed to solve a unique and rampant problem in the Philippines - the spread of digital scams ("budol"), phishing links, and fake news.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Every day, Filipinos - especially the elderly and vulnerable - are targeted by GCash text scams, fake DSWD "ayuda" links, and dangerous health misinformation. Global AI models often fail to detect these because they do not understand Taglish, local cultural context, or the specific Modus Operandi of local scammers.
 
-## React Compiler
+TotooBa.AI solves this by acting as your personal, easy-to-use fact-checker.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Key Features
+*   Hyper-Local Understanding - Speaks in clear, authoritative Taglish to easily explain complex threats to the average Filipino.
+*   Agentic Orchestration - TotooBa.AI does not just guess. It actively uses specific tools to verify information:
+    *   scan_url - Analyzes suspicious links for known phishing domains (e.g., fake GCash login pages).
+    *   search_local_fact_checks - Cross-references claims with trusted local sources like DOH, PNP, and legitimate news outlets.
+    *   analyze_scam_pattern - Detects classic Filipino scam vectors (e.g., false urgency, asking for OTPs).
+*   Instant Verdicts - Clearly labels submissions as TOTOO (True), PEKE (Fake News), or BUDOL (Scam) with simple, actionable next steps.
 
-## Expanding the ESLint configuration
+## App Interface & Flow
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+TotooBa.AI features a premium, responsive glassmorphism UI designed for simplicity. Users just paste the suspicious text or link into the chat.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 1. The Dashboard
+A clean, accessible chat interface where users can interact with the agent.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+![TotooBa.AI Home](assets/screenshot-home.png)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 2. Detecting Phishing Links (Budol)
+When a user submits a fake link (e.g., a fake DSWD Ayuda site), the Agent scans the URL and warns the user.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+![Phishing Detection](assets/screenshot-phishing.png)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 3. Fact-Checking Fake News (Peke)
+The Agent cross-references rumors (like unannounced lockdowns) with official sources like the DOH.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+![Fake News Detection](assets/screenshot-fakenews.png)
+
+### 4. Analyzing Scam Texts (OTP Scams)
+The Agent immediately flags texts asking for OTPs or sensitive credentials as high-risk scams.
+
+![OTP Scam Detection](assets/screenshot-otp.png)
+
+## Technology Stack
+*   AI Engine - Google Gemini 1.5 Flash (utilizing advanced Function Calling and Agentic capabilities)
+*   Frontend - React (Vite) and TypeScript
+*   Styling - Pure CSS with modern Glassmorphism aesthetics
+
+## Hackathon Alignment (Local Impact Explorer)
+*   Practical Solution - Addresses a massive, daily pain point for millions of Filipinos.
+*   Technical Depth - Showcases complex Gemini tool-calling orchestration to actively seek out facts rather than hallucinating answers.
+*   UX & Aesthetics - Delivers a frictionless "Time-to-Value" experience with a beautiful, modern interface.
+
+Built for Build with AI Manila 2026. "Orchestrate the Future. Ship the Agent."

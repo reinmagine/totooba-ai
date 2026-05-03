@@ -43,13 +43,13 @@ The Agent immediately flags texts asking for OTPs or sensitive credentials as hi
 ![OTP Scam Detection](assets/screenshot-otp.png)
 
 ## Technology Stack
-*   AI Engine - Google Gemini 1.5 Flash (utilizing advanced Function Calling and Agentic capabilities)
+*   AI Engine - Google Gemini 3.1 Pro (utilizing advanced Function Calling and Agentic capabilities)
 *   Frontend - React (Vite) and TypeScript
-*   Styling - Pure CSS with modern Glassmorphism aesthetics
+*   Styling - Pure CSS with Glassmorphism aesthetics
 
 ## Hackathon Alignment (Local Impact Explorer)
 *   Practical Solution - Addresses a massive, daily pain point for millions of Filipinos.
 *   Technical Depth - Showcases complex Gemini tool-calling orchestration to actively seek out facts rather than hallucinating answers.
-*   UX & Aesthetics - Delivers a frictionless "Time-to-Value" experience with a beautiful, modern interface.
+*   UX & Aesthetics - Delivers a frictionless "Time-to-Value" experience with a modern interface.
 
 Built for Build with AI Manila 2026. "Orchestrate the Future. Ship the Agent."

@@ -24,22 +24,23 @@ TotooBa.AI features a premium, responsive glassmorphism UI designed for simplici
 ### 1. The Dashboard
 A clean, accessible chat interface where users can interact with the agent.
 
-![TotooBa.AI Home](assets/screenshot-home.png)
+![TotooBa.AI Home](assets\screenshot-home.png)
+
 
 ### 2. Detecting Phishing Links (Budol)
 When a user submits a fake link (e.g., a fake DSWD Ayuda site), the Agent scans the URL and warns the user.
 
-![Phishing Detection](assets/screenshot-phishing.png)
+![Phishing Detection](assets\screenshot-phishing.png)
 
 ### 3. Fact-Checking Fake News (Peke)
 The Agent cross-references rumors (like unannounced lockdowns) with official sources like the DOH.
 
-![Fake News Detection](assets/screenshot-fakenews.png)
+![Fake News Detection](assets\screenshot-fakenews.png)
 
 ### 4. Analyzing Scam Texts (OTP Scams)
 The Agent immediately flags texts asking for OTPs or sensitive credentials as high-risk scams.
 
-![OTP Scam Detection](assets/screenshot-otp.png)
+![OTP Scam Detection](assets\screenshot-otp.png)
 
 ## Technology Stack
 *   AI Engine - Google Gemini 1.5 Flash (utilizing advanced Function Calling and Agentic capabilities)

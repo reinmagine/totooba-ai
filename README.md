@@ -39,7 +39,7 @@ The Agent cross-references rumors (like unannounced lockdowns) with official sou
 ### 4. Analyzing Scam Texts (OTP Scams)
 The Agent immediately flags texts asking for OTPs or sensitive credentials as high-risk scams.
 
-![OTP Scam Detection](assets/screenshot-otp.png)
+![Fake Link Detection](assets/screenshot-fakelink.png)
 
 ## Technology Stack
 *   AI Engine - Google Gemini 1.5 Flash (utilizing advanced Function Calling and Agentic capabilities)

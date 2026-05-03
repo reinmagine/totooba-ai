@@ -1,6 +1,6 @@
 # 🛡️ TotooBa.AI
 
-The Anti-Budol & Fact-Check Agent for the Filipino Commuter and Netizen
+The Anti-Budol & Fact-Check Agent for the Filipino Netizens
 
 ## About The Project
 TotooBa.AI is a hyper-local, agentic AI assistant built specifically for the Build with AI Manila 2026 Challenge. It was designed to solve a unique and rampant problem in the Philippines - the spread of digital scams ("budol"), phishing links, and fake news.
